@@ -1,0 +1,136 @@
+:root {
+    --primary: #111111;
+    --secondary: #D9D9D9;
+    --text-primary: #D9D9D9;
+    --background: #060606, #1C1E1F;
+    --accent-primary: #353535;
+    --gradient-green: #2ab3b3, #82f780;
+    --gradient-red: #aa4253, #fc2929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'M PLUS 1', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(0deg, var(--background));
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 300;
+    margin: 8px 0;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.money {
+    font-family: 'Inconsolata', 'M PLUS 1', sans-serif;
+}
+
+.green {
+    background-image: linear-gradient();
+    background: -webkit-linear-gradient(0deg, var(--gradient-red));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.divider {
+    background-color: var(--accent-primary);
+    height: 1px;
+    border-style: none;
+}
+
+.appbarWrapper {
+    background-color: #111111;
+    display: flex;
+    padding: 11px 24px;
+    height: 54px;
+    justify-content: space-between;
+    vertical-align: center;
+}
+
+.appbarWrapper .profileIcon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 2px  #060606;
+}
+
+.appbarWrapper .hamburgerIcon img {
+    width: 16px;
+    display: block;
+    justify-self: center;
+    margin: 8px 0;
+    
+}
+
+.appbarWrapper .hamburgerIcon, .appbarWrapper .profileIcon {
+    height: 32px;
+    width: 32px;
+    vertical-align: center;
+}
+
+.statusCardWrapper {
+    font-size: 1rem;
+    padding: 24px 24px;
+    max-width: 800px;
+    width: 100vw;
+    margin: auto;
+}
+
+.statusCardWrapper img {
+    height: .5rem;
+    margin: 11px 0 auto 16px;
+}
+
+.roundButton {
+    height: 44px;
+    width: 47%;
+    margin: 16px 0;
+
+    background: var(--primary);
+    color: var(--text-primary);
+    
+    border-radius: 32px;
+    
+    box-shadow: rgba(0, 0, 0, 0.493) 2px 2px 2px;
+}
+
+.accentGreen {
+    border: solid 1px transparent;
+    background-image: linear-gradient(to right, var(--primary), var(--primary)), 
+                        linear-gradient(to right, var(--gradient-green));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.accentRed {
+    border: solid 1px transparent;
+    background-image: linear-gradient(to right, var(--primary), var(--primary)), 
+                        linear-gradient(to right, var(--gradient-red));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.statusCardWrapper .buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accountChooserWrapper {
+    display: flex;
+}
