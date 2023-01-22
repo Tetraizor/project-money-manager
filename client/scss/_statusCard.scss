@@ -1,0 +1,162 @@
+.mainDisplayContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+@keyframes buttonHover {
+    0% {
+        background-color: red;
+    }
+
+    100% {
+        background: white;
+    }
+}
+
+.statusCardWrapper .buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accountChooserWrapper {
+    display: flex;
+}
+
+.progressBarContainer {
+    height: 20px;
+    background-color: $primary;
+
+    margin: 24px 0 8px 0;
+
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: $loading-bar-second;
+    border-style: solid;
+}
+
+.progressBarDesc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progressBarDesc p {
+    font-size: .8rem;
+}
+
+.buttonBackdrop {
+    &--red, &--green {
+        position: relative;
+
+        z-index: -1;
+        border-radius: 32px;
+        height: calc(100% + $button-outline * 2);
+        width: calc(100% + $button-outline * 2);
+
+        top: -$button-outline;
+        left: -$button-outline;
+    }
+    
+    &--red {
+        background: linear-gradient($gradient-red);
+    }
+    &--green {
+        background: linear-gradient($gradient-green);
+    }
+}
+
+.roundButton {
+    height: 44px;
+    width: 47%;
+    margin: 28px 0;
+
+    transition: background-color .1s;
+
+    background-color: $primary;
+    color: $text-primary;
+
+    position: relative;
+
+    border-radius: 32px;
+    border-style: none;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+
+    p {
+        position: absolute;
+        color: white;
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.statusCardWrapper {
+    font-size: 1rem;
+    padding: 24px 32px 0 32px;
+    max-width: 800px;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        height: .5rem;
+        margin: 11px 0 auto 16px;
+    }
+}
+
+.statusCardWrapper, .newEntryScreenContainer {
+    // Animations
+    &.midTransition {
+        right: -50%;
+        transform: translateX(-50%);
+        transition:  right $animation-speed, transform $animation-speed;
+    }
+
+    &.leftTransition {
+        right: -0%;
+        transform: translateX(-50%);
+        transition:  right $animation-speed, transform $animation-speed;
+    }
+
+    &.rightTransition {
+        right: -100%;
+        transform: translateX(-50%);
+        transition:  right $animation-speed, transform $animation-speed;
+    }
+
+    &.mid {
+        right: -50%;
+        transform: translateX(-50%);
+    }
+
+    &.left {
+        right: 50%;
+        transform: translateX(-50%);
+    }
+
+    &.right {
+        right: -150%;
+        transform: translateX(-50%);
+    }
+}
+
+.newEntryScreenContainer {
+    position: absolute;
+    z-index: 1;
+    // height: 100%;
+    width: 100vw;
+    top: 0px;
+
+    right: 50%;
+    transform: translateX(50%);
+
+    max-width: 800px;
+    overflow: hidden;
+}

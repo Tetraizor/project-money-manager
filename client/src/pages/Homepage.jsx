@@ -1,13 +1,14 @@
 import React from 'react'
 import Appbar from '../components/Appbar';
-import StatusCard from '../components/StatusCard';
+import MainDisplay from '../components/MainDisplay';
 
 
 function Homepage() {
     return (
         <>
             <Appbar />
-            <StatusCard />
+            <MainDisplay />
+            <hr className="divider" />
             <h1>Homepage</h1>
         </>
     );
